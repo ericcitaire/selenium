@@ -12,8 +12,8 @@ public class UiTest {
     public void test() throws Exception {
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriver driver = new RemoteWebDriver(new URL("http://chrome:4444"), chromeOptions);
-        driver.get("http://www.google.com");
-        assertEquals("Google", driver.getTitle());
+        driver.get("http://sample:8000");
+        assertEquals("Sample", driver.getTitle());
         driver.quit();
     }
 }
