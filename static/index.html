@@ -1,5 +1,14 @@
 <html>
     <head>
         <title>Sample</title>
+        <script type="text/javascript">
+            function sayHello() {
+                document.querySelector('#content').innerHTML = 'Hello';
+            }
+        </script>
     </head>
+    <body>
+        <div id="content"></div>
+        <button id="btn" onclick="sayHello()">Say Hello</button>
+    </body>
 </html>
