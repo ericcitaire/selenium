@@ -2,30 +2,24 @@ import static org.junit.Assert.assertEquals;
 
 import java.net.URL;
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.Collection;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-
-import java.util.Arrays;
-import java.util.Collection;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 @RunWith(value = Parameterized.class)
 public class UiTest {
@@ -41,10 +35,10 @@ public class UiTest {
     @Parameters(name = "Browser {0}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new ChromeOptions()},
-                {new FirefoxOptions()},
-                {new EdgeOptions()}
-        });
+            {new ChromeOptions()},
+            {new FirefoxOptions()},
+            {new EdgeOptions()}
+});
     }
 
     @Before
